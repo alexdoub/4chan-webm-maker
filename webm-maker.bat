@@ -105,8 +105,10 @@ echo Target bitrate: %bitrate%
 ffmpeg.exe -i "%~1" -c:v libvpx -b:v %bitrate%K -quality best %vfset% %resolutionset% %rotateset% %startset% %lengthset% %audioset% -sn -threads 0 -f webm -pass 1 -y NUL
 ffmpeg.exe -i "%~1" -c:v libvpx -b:v %bitrate%K -quality best %vfset% %resolutionset% %rotateset% %startset% %lengthset% %audioset% -sn -threads 0 -pass 2 -y "%~n1.webm"
 del ffmpeg2pass-0.log
+
+:: Finished
 echo.
-echo Finished! If you didn't see any red error text above than it probably worked. Look for the file in this folder.
+echo Finished! If you didn't see any red error text above then it probably worked. Look for the file in this folder.
 echo Press any key to exit...
 pause >nul
 
