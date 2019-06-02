@@ -29,7 +29,7 @@ echo Example input: "720" to scale to 720p (vertical)
 echo Default: Source video resolution.
 set /p resolution="Enter: " %=%
 if not "%resolution%" == "" (
-	set resolutionset=-scale=-1:%resolution%
+	set resolutionset=scale=-1:%resolution%
 )
  echo.
 
